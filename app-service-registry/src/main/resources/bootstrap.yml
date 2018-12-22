@@ -1,0 +1,19 @@
+#konfigurasi service-registry (eureka server)
+server:
+   port: 9091
+spring:
+   application:
+      name: app-service-registry
+eureka:
+   client:
+      serviceUrl:
+         defaultZone: http://localhost:9091
+---
+eureka:
+   client:
+      register-with-eureka: false
+---
+eureka:
+   client:
+      fetch-registry: false
+      

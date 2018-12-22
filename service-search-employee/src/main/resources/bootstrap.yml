@@ -1,0 +1,11 @@
+#Konfigurasi service search employee
+spring:
+   application:
+      name: service-search-employee
+server:
+   port: ${PORT:8080}
+---
+spring:
+   cloud:
+      config:
+         uri: http://localhost:9090

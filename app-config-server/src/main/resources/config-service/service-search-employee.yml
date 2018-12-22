@@ -1,0 +1,12 @@
+application:
+   message: employee service is here !
+eureka:
+   client:
+      serviceUrl:
+         defaultZone: http://localhost:9091/eureka
+security:
+   basic:
+      enable: false
+management:
+   security:
+      enabled: false
