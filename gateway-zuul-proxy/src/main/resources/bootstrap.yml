@@ -1,0 +1,29 @@
+#konfigurasi api gateway dengan zuul proxy
+spring:
+   application:
+      name: gateway-zuul-proxy
+server:
+   port: 8084
+---
+spring:
+   cloud:
+      config:
+         uri: http://localhost:9090
+security:
+   basic:
+      enable: false
+management:
+   security:
+      enabled: false
+---
+zuul:
+   routes:
+      employeeUI:
+         serviceId: service-employee-dashboard
+---
+zuul:
+   host:
+      socket-timeout-millis: 30000
+         
+      
+   
