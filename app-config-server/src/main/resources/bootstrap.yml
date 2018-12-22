@@ -1,0 +1,15 @@
+#konfigurasi terpusat tiap service
+server:
+   port: 9090
+spring:
+   application:
+      name: app-config-server
+---
+spring:
+   profiles:
+      include: native
+   cloud:
+      config:
+         server:
+            native:
+               search-locations: classpath:/config-service
